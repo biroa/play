@@ -15,11 +15,11 @@ angular.module("play", ["ui.router","oc.lazyLoad"])
 	})
     
     })
-    .controller("AppCtrl", function ($injector, $ocLazyLoad, $state) {
-        var app = this;
+    .controller("HomeCtrl", function ($injector, $ocLazyLoad, $state) {
+        var home = this;
 	//we can load it when controller is initialized
 	$state.go("/");
-        app.click = function () {
+        home.click = function () {
 		$state.go("/");
             $ocLazyLoad.load({
                 name: "store",

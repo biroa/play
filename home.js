@@ -1,6 +1,6 @@
 angular.module("home", [{
-    name: "about_me",
-    files: ["about_me.js"]
+    name: "homeService",
+    files: ["homeService.js"]
 }])
     .controller("HomeCtrl", ["list",function (list) {
         var store = this;
