@@ -9,10 +9,13 @@
   <script type="text/javascript" src="angular-ui-router.js"></script>
   <script src="play.js"></script>
 </head>
-<body ng-app="play" ng-controller="HomeCtrl as home">
-
-<button ng-click="home.click()">Home</button>
-<button ng-click="about.click()">About</button>
+<body ng-app="play">
+<div ng-controller="HomeCtrl as home">
+    <button ng-click="home.click()">Home</button>
+</div>
+<div ng-controller="AbotCtrl as about">
+    <button ng-click="about.click()">About</button>
+</div>
 <ui-view></ui-view>
 
 </body>
