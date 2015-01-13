@@ -1,4 +1,4 @@
 angular.module("homeService", [])
-    .service("list", function () {
+    .service("listHome", function () {
         this.items = ["This", "is", "the","Home","page!"];
     })

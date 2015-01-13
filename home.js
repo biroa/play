@@ -2,8 +2,8 @@ angular.module("home", [{
     name: "homeService",
     files: ["homeService.js"]
 }])
-    .controller("HomeCtrl", ["list",function (list) {
+    .controller("HomeCtrl", ["listHome",function (listHome) {
         var store = this;
-        store.message = list.items
+        store.message = listHome.items
 	console.log(store.message);
     }])

@@ -2,8 +2,8 @@ angular.module("about", [{
     name: "aboutService",
     files: ["aboutService.js"]
 }])
-    .controller("AboutCtrl", ["list",function (list) {
+    .controller("AboutCtrl", ["listAbout",function (listAbout) {
         var store = this;
-        store.message = list.items
+        store.message = listAbout.items
 	console.log(store.message);
     }])
