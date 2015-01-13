@@ -13,6 +13,19 @@ angular.module("play", ["ui.router","oc.lazyLoad"])
 			}
 		}
 	})
+	
+	$stateProvider.state('/about',{
+		templateUrl: "about.html",
+		controller:  "AboutCtrl as about",
+		resolve:{
+			store:function($ocLazyLoad){
+				return $ocLazyLoad.load({
+					name: "about",
+					files:["about.js"]
+				})
+			}
+		}
+	})
     
     })
     .controller("HomeCtrl", function ($injector, $ocLazyLoad, $state) {
@@ -31,4 +44,11 @@ angular.module("play", ["ui.router","oc.lazyLoad"])
             })
 
         }
+    })
+
+    .controller("AboutCtrl",function($injector, $ocLazyLoad, $state){
+	var about = this;
+	about.click = function(){
+		$state.go("/about");
+	}
     })
