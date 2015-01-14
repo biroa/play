@@ -26,6 +26,19 @@ angular.module("play", ["ui.router","oc.lazyLoad"])
 			}
 		}
 	})
+
+        $stateProvider.state('/contact',{
+                templateUrl: "contact.html",
+                controller:  "ContactCtrl as contact",
+                resolve:{
+                        store:function($ocLazyLoad){
+                                return $ocLazyLoad.load({
+                                        name: "contact",
+                                        files:["contact.js"]
+                                })
+                        }
+                }
+        })
     
     })
     .controller("HomeCtrl", function ($injector, $ocLazyLoad, $state) {
@@ -52,3 +65,11 @@ angular.module("play", ["ui.router","oc.lazyLoad"])
 		$state.go("/about");
 	}
     })
+
+    .controller("ContactCtrl",function($injector, $ocLazyLoad, $state){
+        var contact = this;
+        contact.click = function(){
+                $state.go("/contact");
+        }
+    })
+
