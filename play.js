@@ -1,6 +1,7 @@
-angular.module("play", ["ui.router","oc.lazyLoad","restangular"])
+angular.module("play", ["ui.router","oc.lazyLoad","ngAnimate"])
     .config(function($stateProvider){
 	$stateProvider.state('/',{
+		url:"/home",
 		templateUrl: "home.html",
 		controller: "HomeCtrl as home",
 		resolve:{
@@ -15,6 +16,7 @@ angular.module("play", ["ui.router","oc.lazyLoad","restangular"])
 	})
 	
 	$stateProvider.state('/about',{
+		url:"/about",
 		templateUrl: "about.html",
 		controller:  "AboutCtrl as about",
 		resolve:{
@@ -28,6 +30,7 @@ angular.module("play", ["ui.router","oc.lazyLoad","restangular"])
 	})
 
         $stateProvider.state('/contact',{
+		url:"/contact",
                 templateUrl: "contact.html",
                 controller:  "ContactCtrl as contact",
                 resolve:{
