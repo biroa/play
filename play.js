@@ -1,4 +1,4 @@
-angular.module("play", ["ui.router","oc.lazyLoad"])
+angular.module("play", ["ui.router","oc.lazyLoad","restangular"])
     .config(function($stateProvider){
 	$stateProvider.state('/',{
 		templateUrl: "home.html",
