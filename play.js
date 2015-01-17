@@ -1,5 +1,5 @@
-angular.module("play", ["ui.router","oc.lazyLoad","ngAnimate"])
-    .config(function($stateProvider){
+angular.module("play", ["restangular","ui.router","oc.lazyLoad","ngAnimate"])
+
 	$stateProvider.state('/',{
 		url:"/home",
 		templateUrl: "home.html",
