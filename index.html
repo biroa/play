@@ -3,6 +3,7 @@
 <head lang="en">
   <meta charset="UTF-8">
   <title></title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
   <script type="text/javascript" src="js/angular.js"></script>
   <script type="text/javascript" src="js/angular-animate.js"></script>
   <script type="text/javascript" src="js/angular-ui-router.js"></script>
@@ -22,7 +23,11 @@
 <div ng-controller="ContactCtrl as contact">
     <button ng-click="contact.click()">Contact</button>
 </div>
-<ui-view></ui-view>
 
+<div class="row">
+    <div class="span12 ui-view-container">
+      <div class="well" ui-view></div>        
+    </div>
+  </div>         
 </body>
 </html>
