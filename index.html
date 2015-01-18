@@ -5,6 +5,7 @@
   <title></title>
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/animate.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
   <script type="text/javascript" src="js/angular.js"></script>
   <script type="text/javascript" src="js/angular-animate.js"></script>
   <script type="text/javascript" src="js/angular-ui-router.js"></script>
@@ -16,7 +17,7 @@
 </head>
 <body ng-app="play">
 
-<div class="row">
+<div class="row navigation">
     <div class="span12">
 	<div ng-controller="HomeCtrl as home">
 	    <button ng-click="home.click()">Home</button>
@@ -33,9 +34,8 @@
 </div>
 <div class="row">
     <div class="span12 ui-view-container">
-        <div class="well">
-		<ui-view></ui-view>
-	</div>        
+	<div class="well" ui-view>
+	</div>
     </div>
 </div>         
 

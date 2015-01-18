@@ -6,3 +6,8 @@ h1.ng-binding{
 h2{
     color:blue;
 }
+
+.row.navigation{
+    margin-left:0 !important;
+    margin-right:0 !important;
+}
