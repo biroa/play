@@ -3,9 +3,9 @@ angular.module("home", [{
     files: ["homeService.js"]
 }])
     .controller("HomeCtrl", ["listHome",function (listHome) {
-        var store = this;
-	store.title = listHome.title;
-        store.lead = listHome.lead;
-	store.body = listHome.body;
-	console.log(store.message);
+        var homeStorage = this;
+	homeStorage.title = listHome.title;
+        homeStorage.lead = listHome.lead;
+	homeStorage.body = listHome.body;
+	console.log(homeStorage.message);
     }])
