@@ -3,7 +3,10 @@ angular.module("about", [{
     files: ["aboutService.js"]
 }])
     .controller("AboutCtrl", ["listAbout",function (listAbout) {
-        var store = this;
-        store.message = listAbout.items
-	console.log(store.message);
+        var aboutStorage = this;
+        aboutStorage.title = listAbout.title;
+	aboutStorage.lead  = listAbout.lead; 
+	aboutStorage.body  = listAbout.body;
+	aboutStorage.created = listAbout.created;
+	console.log(aboutStorage.title);
     }])
