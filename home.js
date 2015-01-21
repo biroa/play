@@ -4,6 +4,8 @@ angular.module("home", [{
 }])
     .controller("HomeCtrl", ["listHome",function (listHome) {
         var store = this;
-        store.message = listHome.items
+	store.title = listHome.title;
+        store.lead = listHome.lead;
+	store.body = listHome.body;
 	console.log(store.message);
     }])
