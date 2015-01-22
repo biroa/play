@@ -1,4 +1,6 @@
 angular.module("contactService", [])
     .service("listContact", function () {
-        this.items = ["This", "is", "the","Contact","page!"];
+	this.title = "Contact";
+	this.lead  =  "Contact Lead";
+        this.body = ["This", "is", "the","Contact","page!"];
     })
